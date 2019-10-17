@@ -1,4 +1,4 @@
-# Members Only!
+# Flight Booker
 A mock flight booking app to practice advanced form building and has-many-through relationships.
 
 ## Prerequisites
