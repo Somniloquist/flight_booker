@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+codes = ["YYZ", "YYT", "YYJ", "YYC", "YXU", "YXE", "YWG", "YVR", "YUL", "YQX", "YQR", "YQM", "YQB", "YOW", "YHZ", "YHM", "YEG"]
+codes.each do |code|
+  Airport.create(code: code)
+end
