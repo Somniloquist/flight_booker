@@ -11,10 +11,10 @@ codes.each do |code|
   Airport.create(code: code)
 end
 
-Flight.create(start_airport_id: 1, finish_airport_id: 2)
-Flight.create(start_airport_id: 3, finish_airport_id: 1)
-Flight.create(start_airport_id: 2, finish_airport_id: 2)
-Flight.create(start_airport_id: 1, finish_airport_id: 5)
-Flight.create(start_airport_id: 3, finish_airport_id: 2)
-Flight.create(start_airport_id: 4, finish_airport_id: 2)
-Flight.create(start_airport_id: 2, finish_airport_id: 5)
+Flight.create(start_airport_id: 1, finish_airport_id: 2, departure_time: Time.now)
+Flight.create(start_airport_id: 3, finish_airport_id: 1, departure_time: Time.now.prev_day)
+Flight.create(start_airport_id: 2, finish_airport_id: 2, departure_time: Time.now.prev_day)
+Flight.create(start_airport_id: 1, finish_airport_id: 5, departure_time: Time.now)
+Flight.create(start_airport_id: 3, finish_airport_id: 2, departure_time: Time.now.next_day)
+Flight.create(start_airport_id: 4, finish_airport_id: 2, departure_time: Time.now.next_day)
+Flight.create(start_airport_id: 2, finish_airport_id: 5, departure_time: Time.now)
