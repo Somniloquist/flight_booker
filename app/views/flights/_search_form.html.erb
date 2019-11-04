@@ -1,0 +1,16 @@
+<%= form_with scope: :flight, url: root_path, method: :get, local: true do |f| %>
+  <%= f.label :from %>
+  <%= f.collection_select :from_id, @airports, :id, :code, prompt: true %>
+  <br/>
+  <%= f.label :to %>
+  <%= f.collection_select :to_id, @airports, :id, :code, prompt: true %>
+  <br/>
+  <%= f.label :passengers %>
+  <%= f.label :to %>
+  <%= f.number_field :passengers, in: 1..4 %>
+  <br/>
+  <%= f.label :date %>
+  <%= f.collection_select :date, @flight_dates, :to_s, :to_s, prompt: true %>  
+  <br/>
+  <%= f.submit :Search %>
+<% end %>
