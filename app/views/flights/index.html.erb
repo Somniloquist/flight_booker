@@ -1,5 +1,5 @@
 <%= render "search_form" %>
 
-<% unless @flights.empty? %>
-  <%= render "flights" %>
+<% unless @flights.nil? %>
+  <%= render "flight_search_results" %>
 <% end %>
