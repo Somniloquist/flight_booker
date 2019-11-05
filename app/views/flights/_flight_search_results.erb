@@ -1,14 +1,14 @@
 <table>
   <tr>
     <th></th>
-    <th>Flight #</th>
-    <th>Origin Airport</th>
-    <th>Destination Airport</th>
-    <th>Departure Time</th>
-    <th>Flight Duration</th>
+    <th>flight #</th>
+    <th>origin airport</th>
+    <th>destination airport</th>
+    <th>departure time</th>
+    <th>flight duration</th>
   </tr>
 
-  <%= form_with scope: :flight, object: :flight, url: root_url, method: :get, local: true do |f| %>
+  <%= form_with scope: :flight, object: :flight, url: new_booking_path, method: :get, local: true do |f| %>
     <%= hidden_field_tag "flight[passengers]", params[:flight][:passengers] %>
     <%= render @flights %>
     <tr><td><%= f.submit :Submit %></td></tr>
