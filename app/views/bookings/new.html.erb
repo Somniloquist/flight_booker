@@ -2,3 +2,20 @@
 
 <%= render partial: "flight_info", locals: { flight: @flight } %>
 
+<%= form_with model: @booking do |booking_form| %>
+  <% @passengers.times do |i| %>
+    <% passenger_number = i + 1 %>
+    <p>Passenger <%= passenger_number %></p>
+    <hr/>
+    <%= booking_form.fields_for "passengers[]passenger" do |passenger_form| %>
+      <%= passenger_form.label :name %>
+      <%= passenger_form.text_field :name %>
+      <br/>
+      <%= passenger_form.label :email %>
+      <%= passenger_form.email_field :email %>
+      <br/>
+    <% end %>
+    <br/>
+  <% end %>
+  <%= booking_form.submit "Create Booking" %>
+<% end %>
