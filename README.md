@@ -1,5 +1,5 @@
 # Flight Booker
-A mock flight booking app to practice advanced form building and has-many-through relationships.
+A mock flight booking app to practice advanced form building and nested attributes.
 
 ## Prerequisites
 - ruby 2.6.3
@@ -22,9 +22,6 @@ start the server:
 ```
 rails server
 ```
-
-## Live Demo
-~~You can view a live demo of the app on heroku [here](#).~~
 
 ---
 _This project is part of [The Odin Project](https://www.theodinproject.com/) curriculum. [Project link](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms)_
