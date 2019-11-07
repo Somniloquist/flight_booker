@@ -22,10 +22,6 @@ Seed the database with test data
 ```
 rails db:seed
 ```
-run the test suite to ensure everything is working correctly:
-```
-rails test
-```
 start the server:
 ```
 rails server
