@@ -3,11 +3,12 @@
 <%= render partial: "flight_info", locals: { flight: @flight } %>
 
 <%= form_with model: @booking do |booking_form| %>
+  <%= hidden_field_tag "flight[id]", @flight.id %>
   <% @passengers.times do |i| %>
     <% passenger_number = i + 1 %>
     <p>Passenger <%= passenger_number %></p>
     <hr/>
-    <%= booking_form.fields_for "passengers[]passenger" do |passenger_form| %>
+    <%= booking_form.fields_for "passengers_attributes[]", @booking.passengers.build do |passenger_form| %>
       <%= passenger_form.label :name %>
       <%= passenger_form.text_field :name %>
       <br/>
