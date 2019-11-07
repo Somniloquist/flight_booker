@@ -14,6 +14,14 @@ migrate the database:
 ```
 rails db:migrate
 ```
+Reset the database. Seeding the db before reseting will result in 'no such table' error due to the way I set up migrations:
+```
+rails db:reset
+```
+Seed the database with test data
+```
+rails db:seed
+```
 run the test suite to ensure everything is working correctly:
 ```
 rails test
