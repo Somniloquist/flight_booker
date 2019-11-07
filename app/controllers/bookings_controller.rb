@@ -9,13 +9,14 @@ class BookingsController < ApplicationController
     flight = Flight.find(params[:flight][:id])
     booking = flight.bookings.build(booking_params)
     if booking.save
-      render :show
+      redirect_to booking_path(booking)
     else
       render :new
     end
   end
 
   def show
+    @booking = Booking.find(params[:id])
   end
 
   private

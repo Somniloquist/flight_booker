@@ -1,0 +1,10 @@
+<h1>Booking</h1>
+<h3>Flight</h3>
+<%= render partial: "flight_info", locals: { flight: @booking.flight } %>
+
+<h3>Passengers</h3>
+<ol>
+  <% @booking.passengers.each do |passenger| %>
+      <li><%= passenger.name %> - <%= passenger.email %></li>
+  <% end %>
+</ol>
